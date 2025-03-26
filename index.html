@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="./img/to-do-list.png">
+    <title>MY_ TODO_LIST</title>
+</head>
+<body>
+    <header class="header">
+        <h1>My todo List</h1>
+    </header>
+    <main class="main">
+        <section class="mytasks container">
+            <h2>Need ToDo</h2>
+            <ul class="mytask-list list" id="mytask-list">
+            </ul>
+        </section>
+        <section class="haveDone container">
+            <h2>Done</h2>
+            <ul class="haveDone-list list" id="haveDone-list">
+            </ul>
+        </section>
+        <section class="settings">
+            <h3 class="h3">SETTINGS</h5>
+            <div class="settings-button">
+                <button type="button" class="button save" id="button-save">SAVE</button>
+                <button type="button" class="button load" id="button-load">LOAD</button>
+            </div>    
+        </section>        
+    </main>
+    <footer class="footer">
+        <section class="addNewTask">
+            <h2>Add New Task</h2>
+            <form >
+                <input type="text" name="newtask-title" placeholder="New Task's title" id="newtask-title">
+                <textarea name="newtask-text"  placeholder="Describe your task" id="newtask-text" rows="6"></textarea>
+                <button type="button" class="button newtask-button" id="newtask-button">Add A New Task</button>
+            </form>
+        </section>
+    </footer>
+<script src="script/script.js"></script>
+<script src="script/save.js"></script>
+<script src="script/load.js"></script>
+</body>
+</html>

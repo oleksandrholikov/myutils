@@ -1,0 +1,153 @@
+:where(ul[class]) {
+    list-style: none;
+}
+:where(h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6,
+     p,
+     ul,
+     ol,
+     dl):where([class]) {
+     margin-block: 0;
+ }
+p {
+    --paragraphMarginBottom: 24px;
+
+    margin-block: 0;
+}
+p:where(:not([class]):not(:last-child)) {
+    margin-bottom: var(--paragraphMarginBottom);
+}
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+html {   
+    height: 100%;    
+    scroll-behavior: smooth;
+}
+body {    
+    min-height: 100%;    
+    line-height: 1.5;
+    background-color: bisque;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(248, 144, 8);
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    border: none;
+    background-color: rgba(160, 110, 206, 0.356);
+    padding: 3px 10px;
+    border-radius: 5px;
+    
+}
+.button:hover{
+    background-color: green;
+    border: 1px solid greenyellow;
+}
+.container{
+    width: 650px;
+    border: 2px solid blue;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container:not(:last-child){
+    margin-right: 30px;
+}
+.item{
+    display: flex;
+    border: 1px solid turquoise;
+    padding: 5px;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    width: 570px;   
+}
+.mytask-item{
+    background-color: rgba(238, 238, 100, 0.596);
+}
+.haveDone-item{
+    background-color: rgba(127, 255, 212, 0.575); 
+}
+.item:not(:last-child){
+    margin-bottom: 5px
+}
+.item div{
+    display: block;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 3px;
+    max-width: 250px;
+    word-wrap: break-word;
+}
+/* .text p{
+    white-space: pre-wrap;
+    width: 100%;
+} */
+
+/*----SETTINGS-----*/
+.settings{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 2px dashed blue;
+    padding: 15px;
+    border-radius: 15px;
+}
+.settings-button{
+    display: flex;
+    gap: 15px;
+}
+.save, .load{
+    background-color: aquamarine;
+    border: 1px solid transparent;    
+}
+
+
+
+/*----FOOTER-----*/
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+.addNewTask{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px blue solid;
+    padding-inline: 30px;
+    border-radius: 10px;
+}
+.addNewTask form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
